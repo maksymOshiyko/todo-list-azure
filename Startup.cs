@@ -20,7 +20,7 @@ namespace TodoApi
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<TodoContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("AZURE_POSTGRESQL_CONNECTIONSTRING")));
+            services.AddDbContext<TodoContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
         }
 
